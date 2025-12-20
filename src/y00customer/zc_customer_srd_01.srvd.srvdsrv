@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service ZC_CUSTOMER_SRD_01 {
+  expose ZC_CUSTOMER_R01;
+}

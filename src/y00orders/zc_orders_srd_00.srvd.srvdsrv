@@ -1,0 +1,5 @@
+@EndUserText.label: 'ZC_ORDERS_SRD_00'
+define service ZC_ORDERS_SRD_00 {
+  expose ZC_DD_VBAK;
+  expose ZC_DD_VBAP;
+}

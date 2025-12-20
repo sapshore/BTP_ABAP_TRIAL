@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZC_PRODUCT_SRD_00'
+define service ZC_PRODUCT_SRD_00 {
+  expose ZC_DD_Product_00;
+}

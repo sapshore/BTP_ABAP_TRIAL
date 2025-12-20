@@ -1,0 +1,52 @@
+@Metadata.layer: #CORE
+annotate entity ZC_CUSTOMER_R01
+    with 
+{
+     @UI.facet: [
+     {
+       id:              'Customer',
+       purpose:         #STANDARD,
+       type:             #IDENTIFICATION_REFERENCE,
+       label:           'Customer',
+       position:        10
+     }
+     ]
+     
+  @UI: { identification: [{ position: 1, label: 'Customer UUId'}] }
+  @UI: { lineItem: [{ position: 1 , label: 'Copy Customer' , type:#FOR_ACTION, dataAction: 'copyCustomer'}]  }
+  CustomerUUID;
+  @UI: { identification: [{ position: 10 , label: 'Customer Id'}] }
+  @UI: { lineItem: [{ position: 10 , label: 'Customer Id'}] ,
+  selectionField: [{ position: 10 }]
+  }
+  CustomerId;
+  @UI: { identification: [{ position: 20 , label: 'Customer Name'}] }
+  @UI: { lineItem: [{ position: 20 , label: 'Customer Name'}] }
+  CustomerName;
+  @UI: { identification: [{ position: 30  , label: 'Customer Email' }] }
+  @UI: { lineItem: [{ position: 30 , label: 'Customer Email'}] }
+  CustomerEmail;
+  
+    @UI: { identification: [{ position: 35  , label: 'Customer Status' }] }
+  @UI: { lineItem: [{ position: 35 , label: 'Set Customer Status', type:#FOR_ACTION, dataAction: 'customerStatus'}] }
+ Status;
+  @UI: { identification: [{ position: 40 , label: 'Country'}] }
+  @UI: { lineItem: [{ position: 40 , label: 'Country'}] }
+  Country;
+  @UI: { identification: [{ position: 50  , label: 'Region'}] }
+  @UI: { lineItem: [{ position: 50 , label: 'Region'}] }
+  Region;
+  @UI: { identification: [{ position: 60 , label: 'Created By'}] }
+  @UI: { lineItem: [{ position: 60 , label: 'Created By'}] }
+  CreatedBy;
+  @UI: { identification: [{ position: 70 , label: 'Created At'}] }
+  @UI: { lineItem: [{ position: 70 , label: 'Created At'}] }
+  CreatedAt;
+  @UI: { identification: [{ position: 80, label: 'Changed By'}] }
+  @UI: { lineItem: [{ position: 80 , label: 'Changed By'}] }
+  ChangedBy;
+  @UI: { identification: [{ position: 90 , label: 'Changed At' }] }
+  @UI: { lineItem: [{ position: 90 , label: 'Changed At'}] }
+  ChangedAt;
+    
+}

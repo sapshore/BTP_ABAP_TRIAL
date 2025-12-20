@@ -1,0 +1,29 @@
+managed implementation in class zbp_i_dd_vbak unique;
+strict ( 2 );
+
+define behavior for ZI_DD_VBAK //alias <alias_name>
+implementation in class zbp_i_dd_vbak unique
+persistent table y00vbak
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+//  field ( readonly ) Vbeln;
+  association _items { create; }
+}
+
+define behavior for ZI_DD_VBAP //alias <alias_name>
+implementation in class zbp_i_dd_vbap unique
+persistent table y00vbap
+lock dependent by _header
+authorization dependent by _header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Vbeln, Posnr;
+  association _header;
+}

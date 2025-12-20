@@ -1,0 +1,41 @@
+managed implementation in class zbp_i_customer_r01 unique;
+strict ( 2 );
+
+define behavior for ZI_CUSTOMER_R01 //alias <alias_name>
+implementation in class zbp_i_customer_r01 unique
+persistent table z00_customer
+with additional save
+lock master
+authorization master ( instance )
+etag master ChangedAt
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( mandatory : create, readonly : update) CustomerId;
+   field( numbering : managed, readonly) CustomerUUID;
+   field (readonly)  CreatedBy , ChangedBy, CreatedAt, ChangedAt;
+
+   //validate email
+  validation validateEmail on save { create; field CustomerEmail ;}
+
+  action customerStatus ;
+
+  action copyCustomer ;
+
+     mapping for z00_customer {
+     CustomerUUID = customer_uuid;
+     CustomerId =  customer_id ;
+     CustomerName = customer_name  ;
+     CustomerEmail =  Customer_Email ;
+     Status = status;
+     country = Country;
+     region = Region;
+     CreatedBy = created_by;
+     CreatedAt = created_at;
+     ChangedBy = changed_by;
+     ChangedAt = changed_at;
+
+}
+}

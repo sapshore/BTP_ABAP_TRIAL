@@ -1,0 +1,41 @@
+@Metadata.layer: #CORE
+
+@UI: { headerInfo: { typeName: 'Product',
+                     typeNamePlural: 'Products'
+
+                     }}
+annotate entity ZC_DD_Product_00
+    with 
+{
+ @UI.facet: [
+        {
+          id:              'Product',
+          purpose:         #STANDARD,
+          type:            #IDENTIFICATION_REFERENCE,
+          label:           'CuProductstomer',
+          position:        10
+        }]
+
+  @UI: { lineItem: [ { position: 10, label: 'Product ID'  } ],
+     selectionField: [{ position: 10 }],
+      identification: [ { position: 10, label: 'Product ID'  } ]}
+    ProdId;
+
+      @UI: { lineItem: [ { position: 20, label: 'Product Name'  } ],
+     selectionField: [{ position: 20 }],
+      identification: [ { position: 20, label: 'Product Name'  } ]}
+    Name;
+              @UI: { lineItem: [ { position: 30, label: 'Product Group'  } ],
+     selectionField: [{ position: 30 }],
+      identification: [ { position: 30, label: 'Product Group'  } ]}
+    ProdGroup;
+              @UI: { lineItem: [ { position: 40, label: 'Product Status'  } ],
+     selectionField: [{ position: 40 }],
+      identification: [ { position: 40, label: 'Status'  } ]}
+ 
+    Status;
+    
+    
+    
+    
+}

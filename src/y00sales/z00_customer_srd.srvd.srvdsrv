@@ -1,0 +1,4 @@
+@EndUserText.label: 'Customer SRD'
+define service Z00_CUSTOMER_SRD {
+  expose ZC_CUSTOMER_R00;
+}

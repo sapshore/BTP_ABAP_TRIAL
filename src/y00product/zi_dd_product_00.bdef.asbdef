@@ -1,0 +1,24 @@
+managed implementation in class zbp_i_dd_product_00 unique;
+strict ( 2 );
+
+define behavior for ZI_DD_PRODUCT_00 //alias <alias_name>
+persistent table y00rap_product
+lock master
+with additional save
+authorization master ( instance )
+late numbering
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) ProdId;
+
+  mapping for y00rap_product{
+  ProdId= prod_id;
+  Name = name;
+  ProdGroup = prod_group;
+  Status = status;
+
+  }
+}

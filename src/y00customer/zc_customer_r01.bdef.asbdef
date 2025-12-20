@@ -1,0 +1,12 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_CUSTOMER_R01 //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+
+  use action customerStatus;
+  use action copyCustomer;
+}

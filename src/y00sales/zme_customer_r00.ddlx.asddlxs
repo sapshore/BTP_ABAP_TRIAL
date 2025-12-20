@@ -1,0 +1,57 @@
+@Metadata.layer: #CORE
+
+@UI: { headerInfo: { typeName: 'Customer',
+                     typeNamePlural: 'Customers'
+
+                     }}
+
+annotate entity ZC_CUSTOMER_R00 with
+{
+
+  @UI.facet: [
+        {
+          id:              'Customer',
+          purpose:         #STANDARD,
+          type:            #IDENTIFICATION_REFERENCE,
+          label:           'Customer',
+          position:        10
+        }]
+
+  @UI: { lineItem: [ { position: 10, label: 'Customer UUID'  } ],
+     selectionField: [{ position: 10 }],
+      identification: [ { position: 10, label: 'Customer UUID'  } ]}
+
+  @EndUserText.quickInfo: 'Customer UUID Tooltip'
+
+  CustomerUuid;
+  @UI: { lineItem: [ { position: 20, label: 'Customer ID' } ],
+   selectionField: [{ position: 20 }],
+      identification: [ { position: 20, label: 'Customer ID' } ]}
+  CustomerId;
+  @UI: { lineItem: [ { position: 30 , label: 'Customer Name' } ],
+   selectionField: [{ position: 30 }],
+      identification: [ { position: 30 , label: 'Customer Name' } ]}
+  Name;
+
+  @UI: { lineItem: [ { position: 40, label: 'Customer Status'  } ],
+  selectionField: [{ position: 40 }],
+      identification: [ { position: 40, label: 'Customer Status'  } ]}
+  Status;
+  @UI: { lineItem: [ { position: 50 , label: 'Created By' } ],
+  selectionField: [{ position: 50 }],
+      identification: [ { position: 50 , label: 'Created By' } ]}
+  CreatedBy;
+  @UI: { lineItem: [ { position: 60 , label: 'Created At' } ],
+  selectionField: [{ position: 60 }],
+      identification: [ { position: 60 , label: 'Created At' } ]}
+  CreatedAt;
+  @UI: { lineItem: [ { position: 70 , label: 'Changed By' } ],
+  selectionField: [{ position: 70 }],
+      identification: [ { position: 70 , label: 'Changed By' } ]}
+  ChangedBy;
+  @UI: { lineItem: [ { position: 80 , label: 'Changed At' } ],
+  selectionField: [{ position: 80 }],
+      identification: [ { position: 80 , label: 'Changed At' } ]}
+  ChangedAt;
+
+}

@@ -1,0 +1,27 @@
+managed implementation in class zbp_i_customer_r00 unique;
+strict ( 2 );
+
+define behavior for ZI_CUSTOMER_R00 //alias <alias_name>
+persistent table y00rap_customer
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( numbering : managed, readonly) CustomerUuid;
+   field ( mandatory : create, readonly : update) CustomerId;
+
+  mapping for y00rap_customer {
+  CustomerUuid = customer_uuid;
+  CustomerId = customer_id;
+    Name = name;
+    Status = status;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    ChangedBy = changed_by;
+    ChangedAt = changed_at;
+  }
+
+}
