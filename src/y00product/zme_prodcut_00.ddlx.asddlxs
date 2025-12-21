@@ -18,7 +18,8 @@ annotate entity ZC_DD_Product_00
 
   @UI: { lineItem: [ { position: 10, label: 'Product ID'  } ],
      selectionField: [{ position: 10 }],
-      identification: [ { position: 10, label: 'Product ID'  } ]}
+      identification: [ { position: 10, label: 'Product ID'  } ]
+      }
     ProdId;
 
       @UI: { lineItem: [ { position: 20, label: 'Product Name'  } ],

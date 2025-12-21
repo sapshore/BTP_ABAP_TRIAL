@@ -1,0 +1,27 @@
+managed implementation in class zbp_i_00_ekko unique;
+strict ( 2 );
+
+define behavior for YI_00_EKKO //alias <alias_name>
+persistent table y00ekko
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+//  field ( readonly ) Ebeln;
+  association _items { create; }
+}
+
+define behavior for YI_00_EKPO //alias <alias_name>
+persistent table y00ekpo
+lock dependent by _header
+authorization dependent by _header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Ebeln;
+  association _header;
+}

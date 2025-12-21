@@ -1,0 +1,5 @@
+@EndUserText.label: 'Srv Definition'
+define service YSRD_00_EKKO {
+  expose YC_00_EKKO;
+  expose YC_00_EKPO;
+}

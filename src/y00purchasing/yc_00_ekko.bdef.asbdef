@@ -1,0 +1,19 @@
+projection;
+strict ( 2 );
+
+define behavior for YC_00_EKKO //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _items { create; }
+}
+
+define behavior for YC_00_EKPO //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _header;
+}

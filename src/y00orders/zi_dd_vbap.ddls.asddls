@@ -14,6 +14,9 @@ association to parent ZI_DD_VBAK as _header
       @Semantics.amount.currencyCode : 'Currency'
     price as Price,
     currency as Currency,
+    
+     cast(price as abap.dec( 15, 2 )) * cast(quantity as abap.dec(13,3) )  as TotalPrice,
+       
     created_by as CreatedBy,
     created_at as CreatedAt,
     changed_by as ChangedBy,

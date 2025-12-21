@@ -50,8 +50,8 @@ LOOP AT mapped-zi_dd_product_00 REFERENCE INTO DATA(lr_product).
   ld_max_prod_id += 1.
   lr_product->ProdId = ld_max_prod_id.
 
-
      lr_product->ProdId = ld_max_prod_id.
+
       ENDLOOP.
   ENDMETHOD.
 

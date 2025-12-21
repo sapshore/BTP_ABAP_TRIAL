@@ -27,16 +27,20 @@ define view entity ZC_DD_VBAP
              identification: [ { position: 50, label: 'Quantity'  } ] }
      @Semantics.quantity.unitOfMeasure : 'Uom'
     Quantity,
-     @UI: { lineItem:       [ { position: 60, label: 'UOM'  } ],
-             identification: [ { position: 60 , label: 'UOM' } ] }
+ //    @UI: { lineItem:       [ { position: 60, label: 'UOM'  } ],
+//             identification: [ { position: 60 , label: 'UOM' } ] }
     Uom,
      @UI: { lineItem:       [ { position: 70 , label: 'Price' } ],
              identification: [ { position: 70, label: 'Price'  } ] }
           @Semantics.amount.currencyCode : 'Currency'
     Price,
-     @UI: { lineItem:       [ { position: 80 , label: 'Currency' } ],
-             identification: [ { position: 80 , label: 'Currency' } ] }
+ //    @UI: { lineItem:       [ { position: 80 , label: 'Currency' } ],
+//             identification: [ { position: 80 , label: 'Currency' } ] }
     Currency,
+     @UI: { lineItem:       [ { position: 80 , label: 'Total Price' } ],
+             identification: [ { position: 80 , label: 'Total Price' } ] }   
+   TotalPrice, 
+// audit fields        
         @UI.hidden: true
     CreatedBy,
         @UI.hidden: true
