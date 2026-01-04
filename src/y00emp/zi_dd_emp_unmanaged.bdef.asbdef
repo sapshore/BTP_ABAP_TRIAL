@@ -1,0 +1,14 @@
+unmanaged implementation in class zbp_i_dd_emp_unmanaged unique;
+strict ( 2 );
+
+define behavior for ZI_DD_EMP_UNMANAGED //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+}

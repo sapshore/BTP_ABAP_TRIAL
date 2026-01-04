@@ -1,0 +1,5 @@
+@EndUserText.label: 'Srv Definition'
+define service Y00_SRD_EMPLOYEE {
+  expose ZI_DD_EMPLOYEE;
+  expose ZI_DD_EMP_UNMANAGED;
+}

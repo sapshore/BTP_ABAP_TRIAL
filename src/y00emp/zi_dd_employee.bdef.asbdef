@@ -1,0 +1,14 @@
+managed implementation in class zbp_i_dd_employee unique;
+strict ( 2 );
+
+define behavior for ZI_DD_EMPLOYEE //alias <alias_name>
+persistent table z00_employee
+with additional save
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+ }

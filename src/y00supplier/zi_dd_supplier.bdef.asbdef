@@ -1,0 +1,14 @@
+unmanaged implementation in class zbp_i_dd_supplier unique;
+strict ( 2 );
+
+define behavior for ZI_DD_SUPPLIER //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Supplierid;
+}

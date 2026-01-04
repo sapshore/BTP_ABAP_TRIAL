@@ -1,0 +1,34 @@
+@Metadata.layer: #CORE
+annotate entity ZI_DD_EMP_UNMANAGED
+    with 
+{
+        @UI.facet: [
+     {
+       id:              'Employee',
+       purpose:         #STANDARD,
+       type:             #IDENTIFICATION_REFERENCE,
+       label:           'Employee',
+       position:        10
+     }
+     ]
+     
+  @UI: { identification: [{ position: 10 , label: 'Employee Id'}] }
+  @UI: { lineItem: [{ position: 10 , label: 'Employee Id'}] ,
+  selectionField: [{ position: 10 }]
+  }
+  Empid;
+  @UI: { identification: [{ position: 20 , label: 'Name'}] }
+  @UI: { lineItem: [{ position: 20 , label: 'Name'}] }
+  Name;
+  @UI: { identification: [{ position: 30  , label: 'Email' }] }
+  @UI: { lineItem: [{ position: 30 , label: 'Customer Email'}] }
+  Email;
+  
+    @UI: { identification: [{ position: 40  , label: 'Status' }] }
+      @UI: { lineItem: [{ position: 40 , label: 'Status'}] }
+ Status;
+  @UI: { identification: [{ position: 50 , label: 'Department'}] }
+  @UI: { lineItem: [{ position: 50 , label: 'Department'}] }
+  Department;
+    
+}

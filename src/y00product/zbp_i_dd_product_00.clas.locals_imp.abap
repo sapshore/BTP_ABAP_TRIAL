@@ -40,6 +40,7 @@ ENDCLASS.
 CLASS lsc_ZI_DD_PRODUCT_00 IMPLEMENTATION.
 
   METHOD adjust_numbers.
+
   SELECT FROM y00rap_product
   FIELDS MAX( prod_id )
   INTO @DATA(ld_max_prod_id).
@@ -50,7 +51,7 @@ LOOP AT mapped-zi_dd_product_00 REFERENCE INTO DATA(lr_product).
   ld_max_prod_id += 1.
   lr_product->ProdId = ld_max_prod_id.
 
-     lr_product->ProdId = ld_max_prod_id.
+   " lr_product->ProdId = ld_max_prod_id.
 
       ENDLOOP.
   ENDMETHOD.
